@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="dourado">#FFD700</color>
+    <color name="width_alert">@color/black</color>
+    <color name="width_alert_add">#012e52</color>
+    <color name="fosco">#80000000</color>
+    <color name="button_add_tarefa">#012e52</color>
+    <color name="button_calcel_tarefa">#520101</color>
+</resources>

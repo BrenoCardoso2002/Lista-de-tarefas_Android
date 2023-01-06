@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Material3.DayNight"
+    tools:context=".SignIn">
+
+    <!-- RollingScreen -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- AppName -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="32sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"/>
+
+            <!-- ScreenName -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signin"
+                android:textSize="26sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <!-- FieldName -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/e_mail"
+                android:textSize="26sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="32dp"/>
+
+            <!-- TextBox -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="clear_text"
+                android:layout_marginHorizontal="25dp"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black"
+                android:hint="@string/insira_o_seu_e_mail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Ed_email_signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textSize="22sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- FieldName -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/senha"
+                android:textSize="26sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="32dp"/>
+
+            <!-- TextBox -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="password_toggle"
+                android:layout_marginHorizontal="25dp"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black"
+                android:hint="@string/insira_a_sua_senha">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Ed_senha_signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textSize="22sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- FieldName -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repetir_senha"
+                android:textSize="26sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="32dp"/>
+
+            <!-- TextBox -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:endIconMode="password_toggle"
+                android:layout_marginHorizontal="25dp"
+                app:boxStrokeWidth="2dp"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black"
+                android:hint="@string/repita_a_sua_senha">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Ed_rsenha_signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textSize="22sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/Bt_RealCadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:text="@string/realizar_cadastro"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@drawable/button"
+                android:background="@drawable/button"/>
+
+            <!-- ButtonLink -->
+            <Button
+                android:id="@+id/Bt_JtConta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:text="@string/j_tem_conta"
+                android:textSize="18sp"
+                android:textColor="@drawable/link_button"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

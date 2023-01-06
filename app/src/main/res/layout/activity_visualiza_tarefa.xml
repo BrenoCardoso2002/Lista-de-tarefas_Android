@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Material3.DayNight"
+    android:background="@color/fosco"
+    tools:context=".VisualizaTarefa">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bc_alert_add"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                android:layout_marginBottom="-10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5">
+
+                <!-- TextView titulo da AlertDialog -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/visualizar_tarefa"
+                    android:textColor="@color/width_alert_add"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:layout_marginTop="35dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_Excluir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/deletar"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginHorizontal="75dp"
+                    android:background="@drawable/button_cancel"
+                    android:textColor="@drawable/button_cancel"
+                    tools:ignore="ButtonStyle" />
+
+                <!-- FieldName -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titulo_da_tarefa"
+                    android:textSize="26sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="12dp"/>
+
+                <!-- TextBox -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:endIconMode="clear_text"
+                    android:hint="@string/insira_o_titulo"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Ed_VTarefa_Titulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="22sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- FieldName -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resumo_da_tarefa"
+                    android:textSize="26sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="16dp"/>
+
+                <!-- TextBox -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:endIconMode="clear_text"
+                    android:hint="@string/insira_o_resumo"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Ed_VTarefa_Resumo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="22sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- FieldName -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/descri_o_da_tarefa"
+                    android:textSize="26sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="16dp"/>
+
+                <!-- TextBox -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:endIconMode="clear_text"
+                    android:hint="@string/insira_a_descricao"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Ed_VTarefa_Descricao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:textSize="22sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- FieldName -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_da_tarefa"
+                    android:textSize="26sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="16dp"/>
+
+                <!-- TextBox -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:endIconMode="clear_text"
+                    android:hint="@string/insira_a_data"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Ed_VTarefa_Data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:inputType="date"
+                        android:maxLength="10"
+                        android:textSize="22sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <Button
+                        android:id="@+id/btn_Editar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/editar"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/button_add"
+                        android:textColor="@drawable/button_add"
+                        tools:ignore="ButtonStyle" />
+
+                    <Button
+                        android:id="@+id/btn_VCancelar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/cancel"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/button_cancel"
+                        android:textColor="@drawable/button_cancel"
+                        tools:ignore="ButtonStyle" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
